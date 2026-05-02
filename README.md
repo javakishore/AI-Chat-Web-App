@@ -38,15 +38,7 @@ npm run dev
 
 3. Open the app in your browser at the address shown by Vite.
 
-## Optional API integration
 
-If you want real OpenAI responses, add a `.env` file in the project root with:
-
-```env
-VITE_OPENAI_API_KEY=your_openai_key_here
-```
-
-The app will use OpenAI when the key is present, otherwise it falls back to a local simulated engine response.
 
 ## Notes
 
