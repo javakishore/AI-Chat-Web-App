@@ -1,7 +1,6 @@
 # DaivAI Chat Web App
 
-A React + Redux + Context AI chat interface inspired by the Daivtech frontend task.
-
+https://github.com/javakishore/AI-Chat-Web-App.git
 ## Features
 
 - Multiple chat sessions with sidebar history
