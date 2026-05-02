@@ -52,10 +52,19 @@ export async function fetchOpenAIResponse(prompt: string): Promise<string> {
     })
   });
 
-  if (!response.ok) {
-    return `OpenAI request failed with status ${response.status}`;
+  const responseBody = await response.text();
+  let data: any;
+
+  try {
+    data = JSON.parse(responseBody);
+  } catch {
+    data = null;
   }
 
-  const data = await response.json();
+  if (!response.ok) {
+    const errorMessage = data?.error?.message || response.statusText || `status ${response.status}`;
+    return `OpenAI request failed: ${errorMessage}`;
+  }
+
   return data?.choices?.[0]?.message?.content || 'OpenAI returned no content.';
 }
