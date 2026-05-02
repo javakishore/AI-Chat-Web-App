@@ -1,6 +1,5 @@
 # DaivAI Chat Web App
 
-https://github.com/javakishore/AI-Chat-Web-App.git
 ## Features
 
 - Multiple chat sessions with sidebar history
